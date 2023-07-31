@@ -10,9 +10,16 @@ def test_breadth_first_search(input_file_path):
         graph = BreadthFirstSearch(number_of_nodes)
 
         for i in range(number_of_edges):
-            first_node, second_node = map(int, input_file.readline().split())
-            graph.add_edge_nondirected(first_node, second_node)
-            # graph.add_edge_directed(first_node, second_node)  # for directed graph
+            line = input_file.readline()
+            if not line:
+                continue
+            # skip empty lines
+            line = line.strip()  # Read the line
+            # print(line)  # Print the line to verify the contents
+            first_node, second_node = map(int, line.split())  # Use the line
+            graph.add_edge_nondirected(
+                first_node, second_node
+            )  # graph.add_edge_directed(first_node, second_node)  # for directed graph
 
     start_node = 1
     print("BFS traversal starting from node", start_node, ": ", end="")
