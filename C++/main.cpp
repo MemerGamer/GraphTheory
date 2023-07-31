@@ -4,6 +4,7 @@
 
 void tests(string input_file_path){
     test_breadth_first_search(std::move(input_file_path));
+    test_depth_first_search(std::move(input_file_path));
 }
 int main(int argc, char** argv) {
     std::cout << "GraphTheory Algorithms" << std::endl;

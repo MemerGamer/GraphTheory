@@ -7,7 +7,9 @@
 
 #include "useful-includes.h"
 #include "breadth-first_search/breadth-first_search.h"
+#include "depth-first_search/depth-first_search.h"
 
 void test_breadth_first_search(const string& input_file_path);
+void test_depth_first_search(const string& input_file_path);
 
 #endif //C___TESTS_H

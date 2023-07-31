@@ -10,7 +10,7 @@ void test_breadth_first_search(const string &input_file_path) {
 
     input_file >> number_of_nodes >> number_of_edges;
 
-    Graph graph(number_of_nodes);
+    BFSGraph graph(number_of_nodes);
 
     int first_node, second_node;
     for (int i = 0; i < number_of_nodes; ++i) {
@@ -23,5 +23,25 @@ void test_breadth_first_search(const string &input_file_path) {
     cout << "BFS traversal starting from node " << start_node << ": ";
     graph.breadth_first_search(start_node);
     cout << endl;
+    input_file.close();
+}
+
+void test_depth_first_search(const string &input_file_path) {
+    ifstream input_file(input_file_path);
+    int number_of_nodes, number_of_edges;
+
+    input_file >> number_of_nodes >> number_of_edges;
+
+    DFSGraph graph(number_of_nodes);
+
+    int first_node, second_node;
+    for (int i = 0; i < number_of_edges; ++i) {
+        input_file >> first_node >> second_node;
+        graph.add_edge_nondirected(first_node, second_node);
+    }
+
+    int start_node = 1;
+    cout << "DFS traversal starting from node " << start_node << ": ";
+    graph.depth_first_search(start_node);
     input_file.close();
 }
