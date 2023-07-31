@@ -7,12 +7,12 @@
 
 #include "../useful-includes.h"
 
-class Graph{
+class BFSGraph{
 private:
     int number_of_nodes;
     vector<vector<int>> adjacency_list;
 public:
-    Graph(int number_of_nodes);
+    BFSGraph(int number_of_nodes);
     void add_edge_nondirected(int first_node, int second_node);
     void add_edge_directed(int first_node, int second_node);
     void breadth_first_search(int start_node);
