@@ -5,7 +5,7 @@ This repository contains C++ and Python implementations of various graph theory 
 ## List of Algorithms
 
 - [x] Breadth-First Search (BFS)
-- [ ] Depth-First Search (DFS)
+- [x] Depth-First Search (DFS)
 - [ ] Prufer Encode & Decode
 - [ ] Supergraph
 - [ ] Stable / Instable Graphs
