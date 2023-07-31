@@ -8,3 +8,4 @@ sys.path.append(algorithms_dir)
 
 # Add the 'algorithms.breadth_first_search' package to the Python path
 sys.path.append(os.path.join(algorithms_dir, "breadth_first_search"))
+sys.path.append(os.path.join(algorithms_dir, "depth_first_search"))
