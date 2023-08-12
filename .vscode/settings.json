@@ -2,5 +2,10 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "python.formatting.provider": "none"
+    "python.formatting.provider": "none",
+    "python.analysis.extraPaths": [
+        "./Python/algorithms/breadth_first_search",
+        "./Python/algorithms/depth_first_search",
+        "./Python/algorithms/prufer_encode_decode"
+    ]
 }
