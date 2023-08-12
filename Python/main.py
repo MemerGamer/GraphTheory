@@ -1,3 +1,5 @@
+#!/bin/env python3
+
 import tests
 
 if __name__ == "__main__":
@@ -9,5 +11,4 @@ if __name__ == "__main__":
         sys.exit(1)
 
     input_file_path = sys.argv[1]
-    # test_breadth_first_search(input_file_path)
     tests.tests(input_file_path)
