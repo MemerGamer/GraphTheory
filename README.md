@@ -6,7 +6,7 @@ This repository contains C++ and Python implementations of various graph theory 
 
 - [x] Breadth-First Search (BFS)
 - [x] Depth-First Search (DFS)
-- [ ] Prufer Encode & Decode
+- [x] Prufer Encode & Decode
 - [ ] Supergraph
 - [ ] Stable / Instable Graphs
 - [ ] Cutting Nodes and Edges in Graphs
