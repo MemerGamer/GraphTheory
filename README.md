@@ -7,7 +7,6 @@ This repository contains C++ and Python implementations of various graph theory 
 - [x] Breadth-First Search (BFS)
 - [x] Depth-First Search (DFS)
 - [x] Prufer Encode & Decode
-- [ ] Stable / Instable Graphs
 - [ ] Cutting Nodes and Edges in Graphs
 - [ ] Bridges, Local Bridges and Almost Local Bridges in Graph Theory
 - [ ] Kruskal's Minimum Spanning Tree Algorithm
