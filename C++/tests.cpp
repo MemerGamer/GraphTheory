@@ -45,3 +45,34 @@ void test_depth_first_search(const string &input_file_path) {
     graph.depth_first_search(start_node);
     input_file.close();
 }
+
+void test_prufer(const string &input_file_path) {
+    ifstream input_file(input_file_path);
+    int number_of_nodes, number_of_edges;
+
+    input_file >> number_of_nodes >> number_of_edges;
+
+    Prufer prufer(number_of_nodes);
+
+    int first_node, second_node;
+    for (int i = 0; i < number_of_edges; ++i) {
+        input_file >> first_node >> second_node;
+        prufer.add_edge_nondirected(first_node, second_node);
+    }
+
+    cout << "Prufer sequence: ";
+    vector<int> prufer_sequence = prufer.encodeTree();
+    for (auto node: prufer_sequence) {
+        cout << node << " ";
+    }
+    cout << endl;
+
+    cout << "Decoded Prufer sequence: ";
+    vector<pair<int, int>> decoded_prufer_sequence = prufer.decodePruferSequence();
+    for (auto edge: decoded_prufer_sequence) {
+        cout << "(" << edge.first << ", " << edge.second << ") ";
+    }
+    cout << endl;
+
+    input_file.close();
+}
