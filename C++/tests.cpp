@@ -43,6 +43,7 @@ void test_depth_first_search(const string &input_file_path) {
     int start_node = 1;
     cout << "DFS traversal starting from node " << start_node << ": ";
     graph.depth_first_search(start_node);
+    cout << endl;
     input_file.close();
 }
 
@@ -73,6 +74,5 @@ void test_prufer(const string &input_file_path) {
         cout << "(" << edge.first << ", " << edge.second << ") ";
     }
     cout << endl;
-
     input_file.close();
 }
