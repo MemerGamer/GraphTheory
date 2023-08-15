@@ -9,7 +9,7 @@ This repository contains C++ and Python implementations of various graph theory 
 - [x] Prufer Encode & Decode
 - [ ] Cutting Nodes and Edges in Graphs
 - [ ] Bridges, Local Bridges and Almost Local Bridges in Graph Theory
-- [ ] Kruskal's Minimum Spanning Tree Algorithm
+- [x] Kruskal's Minimum Spanning Tree Algorithm
 - [ ] Prim's Minimum Spanning Tree Algorithm
 - [ ] Dijkstra's Shortest Path Algorithm
 - [ ] Bellman-Ford Algorithm
@@ -37,3 +37,5 @@ git clone https://github.com/MemerGamer/GraphTheory.git
 
 Each algorithm is contained in its own folder and file and can be run independently.
 To use an algorithm, simply navigate to the corresponding folder and files and run it using the appropriate command for your language.
+
+There are also tests for each algorithm, these are automatically run if you run the main.cpp file in the root directory for C++ or the main.py file in the root directory for Python.
