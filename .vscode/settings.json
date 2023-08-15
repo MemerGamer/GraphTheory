@@ -6,6 +6,7 @@
     "python.analysis.extraPaths": [
         "./Python/algorithms/breadth_first_search",
         "./Python/algorithms/depth_first_search",
-        "./Python/algorithms/prufer_encode_decode"
+        "./Python/algorithms/prufer_encode_decode",
+        "./Python/algorithms/kruskals_minimum_spanning_tree"
     ]
 }

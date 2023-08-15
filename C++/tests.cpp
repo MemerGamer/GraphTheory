@@ -76,3 +76,22 @@ void test_prufer(const string &input_file_path) {
     cout << endl;
     input_file.close();
 }
+
+void test_kruskal(const string &input_file_path) {
+    ifstream input_file(input_file_path);
+    int number_of_nodes, number_of_edges;
+
+    input_file >> number_of_nodes >> number_of_edges;
+
+    Kruskal kruskal(number_of_nodes);
+
+    int first_node, second_node, weight;
+    for (int i = 0; i < number_of_edges; ++i) {
+        input_file >> first_node >> second_node >> weight;
+        kruskal.addEdge(first_node, second_node, weight);
+    }
+
+    cout << "Kruskal MST: " << endl;
+    kruskal.kruskalMST();
+    input_file.close();
+}

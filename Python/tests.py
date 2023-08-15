@@ -1,13 +1,31 @@
 import config
+from enum import Enum
 from bfs import BreadthFirstSearch
 from dfs import DepthFirstSearch
 from prufer import Prufer
+from kruskal import Kruskal
 
 
-def tests(input_file_path):
-    test_breadth_first_search(input_file_path)
-    test_depth_first_search(input_file_path)
-    test_prufer(input_file_path)
+def tests(input_file_path, selected_tests):
+    for test_type in selected_tests:
+        test_type = test_type.upper()
+        if test_type == "BFS":
+            test_breadth_first_search(input_file_path)
+        elif test_type == "DFS":
+            test_depth_first_search(input_file_path)
+        elif test_type == "PRUFER":
+            test_prufer(input_file_path)
+        elif test_type == "KRUSKAL":
+            test_kruskal(input_file_path)
+        elif test_type == "ALL":
+            test_breadth_first_search(input_file_path)
+            test_depth_first_search(input_file_path)
+            test_prufer(input_file_path)
+            test_kruskal(input_file_path)
+        else:
+            print(f"Unknown or incorrect test type: {test_type}")
+            print("Available test types:")
+            print("ALL, BFS, DFS, PRUFER, KRUSKAL")
 
 
 def test_breadth_first_search(input_file_path):
@@ -81,4 +99,25 @@ def test_prufer(input_file_path):
         decoded_edges = prufer_tree.decode_prufer_sequence()
         for edge in decoded_edges:
             print(f"({edge[0]}, {edge[1]})", end=" ")
+        print()
+
+
+def test_kruskal(input_file_path):
+    with open(input_file_path, "r") as input_file:
+        number_of_nodes, number_of_edges = map(int, input_file.readline().split())
+
+        kruskal_mst = Kruskal(number_of_nodes)
+
+        for i in range(number_of_edges):
+            line = input_file.readline()
+            if not line:
+                continue
+            # skip empty lines
+            line = line.strip()  # Read the line
+            # print(line)  # Print the line to verify the contents
+            first_node, second_node, weight = map(int, line.split())  # Use the line
+            kruskal_mst.add_edge(first_node, second_node, weight)
+
+        print("Kruskal MST:")
+        kruskal_mst.kruskal_mst()
         print()
