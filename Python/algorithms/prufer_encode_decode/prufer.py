@@ -24,21 +24,24 @@ class Prufer:
                 leafs.add(current_node)
 
         for _ in range(self.number_of_nodes - 2):
-            leaf = min(leafs)
-            leafs.remove(leaf)
-            is_leaf_cut[leaf] = True
+            if leafs:
+                leaf = min(leafs)
+                leafs.remove(leaf)
+                is_leaf_cut[leaf] = True
 
-            origin_of_current_node = None
+                origin_of_current_node = None
 
-            for current_neighbour in self.adjacency_list[leaf]:
-                if not is_leaf_cut[current_neighbour]:
-                    origin_of_current_node = current_neighbour
-                    break
+                for current_neighbour in self.adjacency_list[leaf]:
+                    if not is_leaf_cut[current_neighbour]:
+                        origin_of_current_node = current_neighbour
+                        break
 
-            prufer_sequence.append(origin_of_current_node)
-            degree[origin_of_current_node] -= 1
-            if degree[origin_of_current_node] == 1:
-                leafs.add(origin_of_current_node)
+                prufer_sequence.append(origin_of_current_node)
+                degree[origin_of_current_node] -= 1
+                if degree[origin_of_current_node] == 1:
+                    leafs.add(origin_of_current_node)
+            else:
+                break
 
         self.prufer_sequence = prufer_sequence
         return prufer_sequence
