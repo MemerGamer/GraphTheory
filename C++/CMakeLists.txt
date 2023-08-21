@@ -11,4 +11,6 @@ add_executable(C__ main.cpp breadth-first_search/breadth-first_search.cpp breadt
         bellman-ford/bellman_ford.cpp
         bellman-ford/bellman_ford.h
         ford_fulkerson/ford_fulkerson.cpp
-        ford_fulkerson/ford_fulkerson.h)
+        ford_fulkerson/ford_fulkerson.h
+        floyd-warshall/floyd_warshall.cpp
+        floyd-warshall/floyd_warshall.h)

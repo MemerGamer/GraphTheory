@@ -11,6 +11,7 @@
         "./Python/algorithms/prims_minimum_spanning_tree",
         "./Python/algorithms/dijkstras_shortest_path",
         "./Python/algorithms/bellman-ford",
-        "./Python/algorithms/ford_fulkerson_algorithm"
+        "./Python/algorithms/ford_fulkerson_algorithm",
+        "./Python/algorithms/floyd_warshall_algorithm"
     ]
 }
