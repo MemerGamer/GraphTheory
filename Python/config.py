@@ -9,6 +9,7 @@ sys.path.append(algorithms_dir)
 # Add the packages to the Python path
 sys.path.append(os.path.join(algorithms_dir, "breadth_first_search"))
 sys.path.append(os.path.join(algorithms_dir, "depth_first_search"))
+sys.path.append(os.path.join(algorithms_dir, "check_bipartite_algorithm"))
 sys.path.append(os.path.join(algorithms_dir, "prufer_encode_decode"))
 sys.path.append(os.path.join(algorithms_dir, "kruskals_minimum_spanning_tree"))
 sys.path.append(os.path.join(algorithms_dir, "prims_minimum_spanning_tree"))

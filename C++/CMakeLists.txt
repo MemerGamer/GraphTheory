@@ -13,4 +13,6 @@ add_executable(C__ main.cpp breadth-first_search/breadth-first_search.cpp breadt
         ford_fulkerson/ford_fulkerson.cpp
         ford_fulkerson/ford_fulkerson.h
         floyd-warshall/floyd_warshall.cpp
-        floyd-warshall/floyd_warshall.h)
+        floyd-warshall/floyd_warshall.h
+        check_bipartite/check_bipartite.cpp
+        check_bipartite/check_bipartite.h)

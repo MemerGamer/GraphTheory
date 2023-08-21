@@ -1,36 +1,32 @@
 #include <iostream>
-#include <utility>
 #include "tests.h"
 
-void tests(string input_file_path, const std::vector<string>& algorithms) {
+void tests(string input_file_path, const std::vector<string> &algorithms) {
     for (auto &algorithm: algorithms) {
         if (algorithm == "bfs") {
             test_breadth_first_search(input_file_path);
         } else if (algorithm == "dfs") {
             test_depth_first_search(input_file_path);
+        } else if (algorithm == "check_bipartite") {
+            test_check_bipartite(input_file_path);
         } else if (algorithm == "prufer") {
             test_prufer(input_file_path);
         } else if (algorithm == "kruskal") {
             test_kruskal(input_file_path);
-        }
-        else if (algorithm == "prim") {
+        } else if (algorithm == "prim") {
             test_prim(input_file_path);
-        }
-        else if (algorithm == "dijkstra") {
+        } else if (algorithm == "dijkstra") {
             test_dijkstra(input_file_path);
-        }
-        else if (algorithm == "bellman_ford") {
+        } else if (algorithm == "bellman_ford") {
             test_bellman_ford(input_file_path);
-        }
-        else if (algorithm == "ford_fulkerson") {
+        } else if (algorithm == "ford_fulkerson") {
             test_ford_fulkerson(input_file_path);
-        }
-        else if (algorithm == "floyd_warshall") {
+        } else if (algorithm == "floyd_warshall") {
             test_floyd_warshall(input_file_path);
-        }
-        else if (algorithm == "all") {
+        } else if (algorithm == "all") {
             test_breadth_first_search(input_file_path);
             test_depth_first_search(input_file_path);
+            test_check_bipartite(input_file_path);
             test_prufer(input_file_path);
             test_kruskal(input_file_path);
             test_prim(input_file_path);
@@ -40,7 +36,8 @@ void tests(string input_file_path, const std::vector<string>& algorithms) {
             test_floyd_warshall(input_file_path);
         } else {
             cout << "Algorithm " << algorithm << " not found!\n";
-            cout << "Available algorithms: bfs, dfs, prufer, kruskal, prim, dijkstram, bellman_ford, ford_fulkerson, all\n";
+            cout
+                    << "Available algorithms: bfs, dfs,check_bipartite, prufer, kruskal, prim, dijkstra, bellman_ford, ford_fulkerson, floyd_warshall, all\n";
         }
     }
 }
