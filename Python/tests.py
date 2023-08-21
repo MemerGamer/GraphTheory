@@ -8,6 +8,7 @@ from prim import Prim
 from dijkstra import Dijkstra
 from bellman_ford import BellmanFord
 from ford_fulkerson import FordFulkerson
+from floyd_warshall import FloydWarshall
 
 
 def tests(input_file_path, selected_tests):
@@ -29,6 +30,8 @@ def tests(input_file_path, selected_tests):
             test_bellman_ford(input_file_path)
         elif test_type == "FORD_FULKERSON":
             test_ford_fulkerson(input_file_path)
+        elif test_type == "FLOYD_WARSHALL":
+            test_floyd_warshall(input_file_path)
         elif test_type == "ALL":
             test_breadth_first_search(input_file_path)
             test_depth_first_search(input_file_path)
@@ -38,6 +41,7 @@ def tests(input_file_path, selected_tests):
             test_dijkstra(input_file_path)
             test_bellman_ford(input_file_path)
             test_ford_fulkerson(input_file_path)
+            test_floyd_warshall(input_file_path)
         else:
             print(f"Unknown or incorrect test type: {test_type}")
             print("Available test types:")
@@ -220,4 +224,23 @@ def test_ford_fulkerson(input_file_path):
             ford_fulkerson.addEdge(first_node, second_node, weight)
 
         print("Ford-Fulkerson Max Flow:", ford_fulkerson.maxFlow(source, drain))
+        print()
+
+
+def test_floyd_warshall(input_file_path):
+    with open(input_file_path, "r") as input_file:
+        number_of_nodes, number_of_edges = map(int, input_file.readline().split())
+        floyd_warshall = FloydWarshall(number_of_nodes + 1)
+
+        for i in range(number_of_edges):
+            line = input_file.readline()
+            if not line:
+                continue
+            line = line.strip()
+            first_node, second_node, weight = map(int, line.split())
+            floyd_warshall.addEdge(first_node, second_node, weight)
+
+        floyd_warshall.floydWarshall()
+        print("Floyd-Warshall Shortest Paths:")
+        floyd_warshall.printShortestPaths()
         print()

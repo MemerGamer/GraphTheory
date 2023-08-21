@@ -172,3 +172,24 @@ void test_ford_fulkerson(const string &input_file_path) {
     cout << "Max flow: " << fordFulkerson.maxFlow(source, drain) << endl;
     input_file.close();
 }
+
+void test_floyd_warshall(const string &input_file_path) {
+    ifstream input_file(input_file_path);
+    int number_of_nodes, number_of_edges;
+
+    input_file >> number_of_nodes >> number_of_edges;
+
+    FloydWarshall floydWarshall(number_of_nodes + 1);
+
+    int first_node, second_node, weight;
+    for (int i = 0; i < number_of_edges; ++i) {
+        input_file >> first_node >> second_node >> weight;
+        floydWarshall.addEdge(first_node, second_node, weight);
+    }
+
+    cout << "Floyd-Warshall: " << endl;
+    floydWarshall.floydWarshall();
+    floydWarshall.printShortestPaths();
+    input_file.close();
+
+}
