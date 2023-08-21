@@ -2,6 +2,10 @@
 
 Each input file follows a convention:
 
+## If there are no weights
+
+`name: 'default-input-[number].txt'`
+
 ```text 
 [number of nodes] [number of edges]
 [node 1] [node 2] 
@@ -11,6 +15,8 @@ Each input file follows a convention:
 
 ## If there are weights
 
+`name: 'weighted-input-[number].txt'`
+
 ```text
 [number of nodes] [number of edges]
 [node 1] [node 2] [weight]
@@ -19,6 +25,8 @@ Each input file follows a convention:
 ```
 
 ## If there are source and drain nodes
+
+`name: 'source-drain-input-[number].txt'`
 
 ```text
 [number of nodes] [number of edges]
