@@ -102,7 +102,7 @@ void test_prim(const string &input_file_path) {
 
     input_file >> number_of_nodes >> number_of_edges;
 
-    Prim prim(number_of_nodes+1);
+    Prim prim(number_of_nodes + 1);
 
     int first_node, second_node, weight;
     for (int i = 0; i < number_of_edges; ++i) {
@@ -121,7 +121,7 @@ void test_dijkstra(const string &input_file_path) {
 
     input_file >> number_of_nodes >> number_of_edges;
 
-    Dijkstra dijkstra(number_of_nodes+1);
+    Dijkstra dijkstra(number_of_nodes + 1);
 
     int first_node, second_node, weight;
     for (int i = 0; i < number_of_edges; ++i) {
@@ -132,4 +132,24 @@ void test_dijkstra(const string &input_file_path) {
     cout << "Dijkstra: " << endl;
     dijkstra.dijkstra(1);
     input_file.close();
+}
+
+void test_bellman_ford(const string &input_file_path) {
+    ifstream input_file(input_file_path);
+    int number_of_nodes, number_of_edges;
+
+    input_file >> number_of_nodes >> number_of_edges;
+
+    BellmanFord bellmanFord(number_of_nodes + 1);
+
+    int first_node, second_node, weight;
+    for (int i = 0; i < number_of_edges; ++i) {
+        input_file >> first_node >> second_node >> weight;
+        bellmanFord.addEdge(first_node, second_node, weight);
+    }
+
+    cout << "Bellman-Ford: " << endl;
+    bellmanFord.bellmanFord(1);
+    input_file.close();
+
 }

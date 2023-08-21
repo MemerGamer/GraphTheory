@@ -6,6 +6,7 @@ from prufer import Prufer
 from kruskal import Kruskal
 from prim import Prim
 from dijkstra import Dijkstra
+from bellman_ford import BellmanFord
 
 
 def tests(input_file_path, selected_tests):
@@ -23,6 +24,8 @@ def tests(input_file_path, selected_tests):
             test_prim(input_file_path)
         elif test_type == "DIJKSTRA":
             test_dijkstra(input_file_path)
+        elif test_type == "BELLMAN_FORD":
+            test_bellman_ford(input_file_path)
         elif test_type == "ALL":
             test_breadth_first_search(input_file_path)
             test_depth_first_search(input_file_path)
@@ -30,10 +33,11 @@ def tests(input_file_path, selected_tests):
             test_kruskal(input_file_path)
             test_prim(input_file_path)
             test_dijkstra(input_file_path)
+            test_bellman_ford(input_file_path)
         else:
             print(f"Unknown or incorrect test type: {test_type}")
             print("Available test types:")
-            print("ALL, BFS, DFS, PRUFER, KRUSKAL")
+            print("ALL, BFS, DFS, PRUFER, KRUSKAL, PRIM, DIJKSTRA, BELLMAN_FORD")
 
 
 def test_breadth_first_search(input_file_path):
@@ -170,4 +174,25 @@ def test_dijkstra(input_file_path):
 
         print("Dijkstra SP:")
         dijkstra_sp.dijkstra(1)
+        print()
+
+
+def test_bellman_ford(input_file_path):
+    with open(input_file_path, "r") as input_file:
+        number_of_nodes, number_of_edges = map(int, input_file.readline().split())
+
+        bellman_ford_sp = BellmanFord(number_of_nodes + 1)
+
+        for i in range(number_of_edges):
+            line = input_file.readline()
+            if not line:
+                continue
+            # skip empty lines
+            line = line.strip()  # Read the line
+            # print(line)  # Print the line to verify the contents
+            first_node, second_node, weight = map(int, line.split())  # Use the line
+            bellman_ford_sp.addEdge(first_node, second_node, weight)
+
+        print("Bellman-Ford SP:")
+        bellman_ford_sp.bellmanFord(1)
         print()
