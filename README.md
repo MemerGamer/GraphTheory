@@ -10,7 +10,7 @@ This repository contains C++ and Python implementations of various graph theory 
 - [ ] Cutting Nodes and Edges in Graphs
 - [ ] Bridges, Local Bridges and Almost Local Bridges in Graph Theory
 - [x] Kruskal's Minimum Spanning Tree Algorithm
-- [ ] Prim's Minimum Spanning Tree Algorithm
+- [x] Prim's Minimum Spanning Tree Algorithm
 - [ ] Dijkstra's Shortest Path Algorithm
 - [ ] Bellman-Ford Algorithm
 - [ ] Ford Fulkerson Algorithm
