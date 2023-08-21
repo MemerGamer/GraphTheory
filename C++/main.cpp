@@ -16,12 +16,16 @@ void tests(string input_file_path, const std::vector<string>& algorithms) {
         else if (algorithm == "prim") {
             test_prim(input_file_path);
         }
+        else if (algorithm == "dijkstra") {
+            test_dijkstra(input_file_path);
+        }
         else if (algorithm == "all") {
             test_breadth_first_search(input_file_path);
             test_depth_first_search(input_file_path);
             test_prufer(input_file_path);
             test_kruskal(input_file_path);
             test_prim(input_file_path);
+            test_dijkstra(input_file_path);
         } else {
             cout << "Algorithm " << algorithm << " not found!\n";
             cout << "Available algorithms: bfs, dfs, prufer, kruskal, prim, all\n";
