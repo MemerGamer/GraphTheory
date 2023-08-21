@@ -7,6 +7,7 @@ This repository contains C++ and Python implementations of various graph theory 
 - [x] Breadth-First Search (BFS)
 - [x] Depth-First Search (DFS)
 - [x] Prufer Encode & Decode
+- [x] Check if a Graph is Bipartite (Colorable)
 - [ ] Cutting Nodes and Edges in Graphs
 - [ ] Bridges, Local Bridges and Almost Local Bridges in Graph Theory
 - [x] Kruskal's Minimum Spanning Tree Algorithm
