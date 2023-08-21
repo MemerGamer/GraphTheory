@@ -8,7 +8,8 @@ This repository contains C++ and Python implementations of various graph theory 
 - [x] Depth-First Search (DFS)
 - [x] Prufer Encode & Decode
 - [x] Check if a Graph is Bipartite (Colorable)
-- [ ] Cutting Nodes and Edges in Graphs
+- [x] Articulation Points (or Cut Vertices) in a Graph
+- [ ] Articulation Bridges in a Graph
 - [ ] Bridges, Local Bridges and Almost Local Bridges in Graph Theory
 - [x] Kruskal's Minimum Spanning Tree Algorithm
 - [x] Prim's Minimum Spanning Tree Algorithm
