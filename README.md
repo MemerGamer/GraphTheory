@@ -14,7 +14,7 @@ This repository contains C++ and Python implementations of various graph theory 
 - [x] Dijkstra's Shortest Path Algorithm
 - [x] Bellman-Ford Algorithm
 - [x] Ford Fulkerson Algorithm
-- [ ] Floyd-Warshall Algorithm
+- [x] Floyd-Warshall Algorithm
 
 ## Getting Started
 
