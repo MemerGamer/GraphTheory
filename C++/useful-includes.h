@@ -21,7 +21,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <limits>
-
+#include <climits>
 using namespace std;
 
 #endif //C___USEFUL_INCLUDES_H
