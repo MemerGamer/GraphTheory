@@ -15,4 +15,6 @@ add_executable(C__ main.cpp breadth-first_search/breadth-first_search.cpp breadt
         floyd-warshall/floyd_warshall.cpp
         floyd-warshall/floyd_warshall.h
         check_bipartite/check_bipartite.cpp
-        check_bipartite/check_bipartite.h)
+        check_bipartite/check_bipartite.h
+        articulation_points/articulation_points.cpp
+        articulation_points/articulation_points.h)
