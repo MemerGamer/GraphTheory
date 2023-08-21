@@ -22,6 +22,9 @@ void tests(string input_file_path, const std::vector<string>& algorithms) {
         else if (algorithm == "bellman_ford") {
             test_bellman_ford(input_file_path);
         }
+        else if (algorithm == "ford_fulkerson") {
+            test_ford_fulkerson(input_file_path);
+        }
         else if (algorithm == "all") {
             test_breadth_first_search(input_file_path);
             test_depth_first_search(input_file_path);
@@ -30,9 +33,10 @@ void tests(string input_file_path, const std::vector<string>& algorithms) {
             test_prim(input_file_path);
             test_dijkstra(input_file_path);
             test_bellman_ford(input_file_path);
+            test_ford_fulkerson(input_file_path);
         } else {
             cout << "Algorithm " << algorithm << " not found!\n";
-            cout << "Available algorithms: bfs, dfs, prufer, kruskal, prim, dijkstram, bellman_ford all\n";
+            cout << "Available algorithms: bfs, dfs, prufer, kruskal, prim, dijkstram, bellman_ford, ford_fulkerson, all\n";
         }
     }
 }

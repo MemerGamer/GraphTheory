@@ -9,4 +9,6 @@ add_executable(C__ main.cpp breadth-first_search/breadth-first_search.cpp breadt
         dijkstras_shortest_path/dijkstra.cpp
         dijkstras_shortest_path/dijkstra.h
         bellman-ford/bellman_ford.cpp
-        bellman-ford/bellman_ford.h)
+        bellman-ford/bellman_ford.h
+        ford_fulkerson/ford_fulkerson.cpp
+        ford_fulkerson/ford_fulkerson.h)
