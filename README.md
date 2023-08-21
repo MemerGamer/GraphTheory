@@ -12,7 +12,7 @@ This repository contains C++ and Python implementations of various graph theory 
 - [x] Kruskal's Minimum Spanning Tree Algorithm
 - [x] Prim's Minimum Spanning Tree Algorithm
 - [x] Dijkstra's Shortest Path Algorithm
-- [ ] Bellman-Ford Algorithm
+- [x] Bellman-Ford Algorithm
 - [ ] Ford Fulkerson Algorithm
 - [ ] Floyd-Warshall Algorithm
 
