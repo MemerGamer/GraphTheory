@@ -193,3 +193,25 @@ void test_floyd_warshall(const string &input_file_path) {
     input_file.close();
 
 }
+
+void test_check_bipartite(const string &input_file_path) {
+    ifstream input_file(input_file_path);
+    int number_of_nodes, number_of_edges;
+
+    input_file >> number_of_nodes >> number_of_edges;
+
+    CheckBipartite checkBipartite(number_of_nodes + 1);
+
+    int first_node, second_node;
+    for (int i = 0; i < number_of_edges; ++i) {
+        input_file >> first_node >> second_node;
+        checkBipartite.addEdge(first_node, second_node);
+    }
+
+    if(checkBipartite.isBipartite())
+        cout << "The graph is bipartite" << endl;
+    else
+        cout << "The graph is not bipartite" << endl;
+    input_file.close();
+
+}

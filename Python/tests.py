@@ -9,6 +9,7 @@ from dijkstra import Dijkstra
 from bellman_ford import BellmanFord
 from ford_fulkerson import FordFulkerson
 from floyd_warshall import FloydWarshall
+from check_bipartite import CheckBipartite
 
 
 def tests(input_file_path, selected_tests):
@@ -18,6 +19,8 @@ def tests(input_file_path, selected_tests):
             test_breadth_first_search(input_file_path)
         elif test_type == "DFS":
             test_depth_first_search(input_file_path)
+        elif test_type == "CHECK_BIPARTITE":
+            test_check_bipartite(input_file_path)
         elif test_type == "PRUFER":
             test_prufer(input_file_path)
         elif test_type == "KRUSKAL":
@@ -35,6 +38,7 @@ def tests(input_file_path, selected_tests):
         elif test_type == "ALL":
             test_breadth_first_search(input_file_path)
             test_depth_first_search(input_file_path)
+            test_check_bipartite(input_file_path)
             test_prufer(input_file_path)
             test_kruskal(input_file_path)
             test_prim(input_file_path)
@@ -45,7 +49,9 @@ def tests(input_file_path, selected_tests):
         else:
             print(f"Unknown or incorrect test type: {test_type}")
             print("Available test types:")
-            print("ALL, BFS, DFS, PRUFER, KRUSKAL, PRIM, DIJKSTRA, BELLMAN_FORD")
+            print(
+                "ALL, BFS, DFS, CHECK_BIPARTITE PRUFER, KRUSKAL, PRIM, DIJKSTRA, BELLMAN_FORD, FORD_FULKERSON, FLOYD_WARSHALL"
+            )
 
 
 def test_breadth_first_search(input_file_path):
@@ -93,6 +99,26 @@ def test_depth_first_search(input_file_path):
     start_node = 1
     print("DFS traversal starting from node", start_node, ":", end=" ")
     graph.depth_first_search(start_node)
+
+
+def test_check_bipartite(input_file_path):
+    with open(input_file_path, "r") as input_file:
+        number_of_nodes, number_of_edges = map(int, input_file.readline().split())
+        check_bipartite = CheckBipartite(number_of_nodes + 1)
+
+        for i in range(number_of_edges):
+            line = input_file.readline()
+            if not line:
+                continue
+            line = line.strip()
+            first_node, second_node = map(int, line.split())
+            check_bipartite.addEdge(first_node, second_node)
+
+        if check_bipartite.isBipartite():
+            print("Graph is bipartite")
+        else:
+            print("Graph is not bipartite")
+        print()
 
 
 def test_prufer(input_file_path):

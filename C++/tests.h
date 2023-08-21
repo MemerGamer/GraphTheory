@@ -8,6 +8,7 @@
 #include "useful-includes.h"
 #include "breadth-first_search/breadth-first_search.h"
 #include "depth-first_search/depth-first_search.h"
+#include "check_bipartite/check_bipartite.h"
 #include "prufer_encode_decode/prufer.h"
 #include "kruskals_minimum_spanning_tree/kruskal.h"
 #include "prims_minimum_spanning_tree/prim.h"
@@ -19,6 +20,8 @@
 void test_breadth_first_search(const string &input_file_path);
 
 void test_depth_first_search(const string &input_file_path);
+
+void test_check_bipartite(const string &input_file_path);
 
 void test_prufer(const string &input_file_path);
 
