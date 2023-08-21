@@ -5,6 +5,7 @@ from dfs import DepthFirstSearch
 from prufer import Prufer
 from kruskal import Kruskal
 from prim import Prim
+from dijkstra import Dijkstra
 
 
 def tests(input_file_path, selected_tests):
@@ -20,12 +21,15 @@ def tests(input_file_path, selected_tests):
             test_kruskal(input_file_path)
         elif test_type == "PRIM":
             test_prim(input_file_path)
+        elif test_type == "DIJKSTRA":
+            test_dijkstra(input_file_path)
         elif test_type == "ALL":
             test_breadth_first_search(input_file_path)
             test_depth_first_search(input_file_path)
             test_prufer(input_file_path)
             test_kruskal(input_file_path)
             test_prim(input_file_path)
+            test_dijkstra(input_file_path)
         else:
             print(f"Unknown or incorrect test type: {test_type}")
             print("Available test types:")
@@ -145,4 +149,25 @@ def test_prim(input_file_path):
 
         print("Prim MST:")
         prim_mst.primMST()
+        print()
+
+
+def test_dijkstra(input_file_path):
+    with open(input_file_path, "r") as input_file:
+        number_of_nodes, number_of_edges = map(int, input_file.readline().split())
+
+        dijkstra_sp = Dijkstra(number_of_nodes + 1)
+
+        for i in range(number_of_edges):
+            line = input_file.readline()
+            if not line:
+                continue
+            # skip empty lines
+            line = line.strip()  # Read the line
+            # print(line)  # Print the line to verify the contents
+            first_node, second_node, weight = map(int, line.split())  # Use the line
+            dijkstra_sp.addEdge(first_node, second_node, weight)
+
+        print("Dijkstra SP:")
+        dijkstra_sp.dijkstra(1)
         print()
