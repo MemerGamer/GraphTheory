@@ -7,4 +7,6 @@ add_executable(C__ main.cpp breadth-first_search/breadth-first_search.cpp breadt
         prims_minimum_spanning_tree/prim.cpp
         prims_minimum_spanning_tree/prim.h
         dijkstras_shortest_path/dijkstra.cpp
-        dijkstras_shortest_path/dijkstra.h)
+        dijkstras_shortest_path/dijkstra.h
+        bellman-ford/bellman_ford.cpp
+        bellman-ford/bellman_ford.h)
