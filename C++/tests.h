@@ -13,6 +13,7 @@
 #include "prims_minimum_spanning_tree/prim.h"
 #include "dijkstras_shortest_path/dijkstra.h"
 #include "bellman-ford/bellman_ford.h"
+#include "ford_fulkerson/ford_fulkerson.h"
 
 void test_breadth_first_search(const string &input_file_path);
 
@@ -27,4 +28,6 @@ void test_prim(const string &input_file_path);
 void test_dijkstra(const string &input_file_path);
 
 void test_bellman_ford(const string &input_file_path);
+
+void test_ford_fulkerson(const string &input_file_path);
 #endif //C___TESTS_H
