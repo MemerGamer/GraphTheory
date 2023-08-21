@@ -16,6 +16,7 @@
 #include "bellman-ford/bellman_ford.h"
 #include "ford_fulkerson/ford_fulkerson.h"
 #include "floyd-warshall/floyd_warshall.h"
+#include "articulation_points/articulation_points.h"
 
 void test_breadth_first_search(const string &input_file_path);
 
@@ -36,4 +37,6 @@ void test_bellman_ford(const string &input_file_path);
 void test_ford_fulkerson(const string &input_file_path);
 
 void test_floyd_warshall(const string &input_file_path);
+
+void test_articulation_points(const string &input_file_path);
 #endif //C___TESTS_H

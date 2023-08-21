@@ -10,6 +10,7 @@ from bellman_ford import BellmanFord
 from ford_fulkerson import FordFulkerson
 from floyd_warshall import FloydWarshall
 from check_bipartite import CheckBipartite
+from articulation_points import ArticulationPoints
 
 
 def tests(input_file_path, selected_tests):
@@ -35,6 +36,8 @@ def tests(input_file_path, selected_tests):
             test_ford_fulkerson(input_file_path)
         elif test_type == "FLOYD_WARSHALL":
             test_floyd_warshall(input_file_path)
+        elif test_type == "ARTICULATION_POINTS":
+            test_articulation_points(input_file_path)
         elif test_type == "ALL":
             test_breadth_first_search(input_file_path)
             test_depth_first_search(input_file_path)
@@ -46,6 +49,7 @@ def tests(input_file_path, selected_tests):
             test_bellman_ford(input_file_path)
             test_ford_fulkerson(input_file_path)
             test_floyd_warshall(input_file_path)
+            test_articulation_points(input_file_path)
         else:
             print(f"Unknown or incorrect test type: {test_type}")
             print("Available test types:")
@@ -269,4 +273,22 @@ def test_floyd_warshall(input_file_path):
         floyd_warshall.floydWarshall()
         print("Floyd-Warshall Shortest Paths:")
         floyd_warshall.printShortestPaths()
+        print()
+
+
+def test_articulation_points(input_file_path):
+    with open(input_file_path, "r") as input_file:
+        number_of_nodes, number_of_edges = map(int, input_file.readline().split())
+        articulation_points = ArticulationPoints(number_of_nodes + 1)
+
+        for i in range(number_of_edges):
+            line = input_file.readline()
+            if not line:
+                continue
+            line = line.strip()
+            first_node, second_node = map(int, line.split())
+            articulation_points.addEdge(first_node, second_node)
+
+        articulation_points.findArticulationPoints()
+        articulation_points.printArticulationPoints()
         print()
