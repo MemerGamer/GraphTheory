@@ -9,8 +9,7 @@ This repository contains C++ and Python implementations of various graph theory 
 - [x] Prufer Encode & Decode
 - [x] Check if a Graph is Bipartite (Colorable)
 - [x] Articulation Points (or Cut Vertices) in a Graph
-- [ ] Articulation Bridges in a Graph
-- [ ] Bridges, Local Bridges and Almost Local Bridges in Graph Theory
+- [x] Bridge detection algorithm
 - [x] Kruskal's Minimum Spanning Tree Algorithm
 - [x] Prim's Minimum Spanning Tree Algorithm
 - [x] Dijkstra's Shortest Path Algorithm
