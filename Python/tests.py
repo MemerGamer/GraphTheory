@@ -11,6 +11,7 @@ from ford_fulkerson import FordFulkerson
 from floyd_warshall import FloydWarshall
 from check_bipartite import CheckBipartite
 from articulation_points import ArticulationPoints
+from bridge_detection import BridgeDetection
 
 
 def tests(input_file_path, selected_tests):
@@ -38,6 +39,8 @@ def tests(input_file_path, selected_tests):
             test_floyd_warshall(input_file_path)
         elif test_type == "ARTICULATION_POINTS":
             test_articulation_points(input_file_path)
+        elif test_type == "BRIDGES":
+            test_bridges(input_file_path)
         elif test_type == "ALL":
             test_breadth_first_search(input_file_path)
             test_depth_first_search(input_file_path)
@@ -50,6 +53,7 @@ def tests(input_file_path, selected_tests):
             test_ford_fulkerson(input_file_path)
             test_floyd_warshall(input_file_path)
             test_articulation_points(input_file_path)
+            test_bridges(input_file_path)
         else:
             print(f"Unknown or incorrect test type: {test_type}")
             print("Available test types:")
@@ -291,4 +295,22 @@ def test_articulation_points(input_file_path):
 
         articulation_points.findArticulationPoints()
         articulation_points.printArticulationPoints()
+        print()
+
+
+def test_bridges(input_file_path):
+    with open(input_file_path, "r") as input_file:
+        number_of_nodes, number_of_edges = map(int, input_file.readline().split())
+        bridge_detection = BridgeDetection(number_of_nodes + 1)
+
+        for i in range(number_of_edges):
+            line = input_file.readline()
+            if not line:
+                continue
+            line = line.strip()
+            first_node, second_node = map(int, line.split())
+            bridge_detection.add_edge(first_node, second_node)
+
+        bridge_detection.find_bridges()
+        bridge_detection.print_bridges()
         print()

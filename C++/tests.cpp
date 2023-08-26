@@ -234,3 +234,23 @@ void test_articulation_points(const string &input_file_path) {
     articulationPoints.printArticulationPoints();
     input_file.close();
 }
+
+void test_bridges(const string &input_file_path) {
+    ifstream input_file(input_file_path);
+    int number_of_nodes, number_of_edges;
+
+    input_file >> number_of_nodes >> number_of_edges;
+
+    BridgeDetection bridgeDetection(number_of_nodes + 1);
+
+    int first_node, second_node;
+    for (int i = 0; i < number_of_edges; ++i) {
+        input_file >> first_node >> second_node;
+        bridgeDetection.addEdge(first_node, second_node);
+    }
+
+    bridgeDetection.findBridges();
+    bridgeDetection.printBridges();
+    input_file.close();
+
+}
