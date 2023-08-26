@@ -4,7 +4,7 @@
 
 #include "bellman_ford.h"
 
-BellmanFord::BellmanFord(int V): V(V) {
+BellmanFord::BellmanFord(int V) : V(V) {
     this->adj.resize(V);
 }
 
@@ -18,7 +18,7 @@ bool BellmanFord::bellmanFord(int src) {
 
     for (int i = 0; i < V - 1; ++i) {
         for (int u = 0; u < V; ++u) {
-            for (const auto &neighbour : this->adj[u]) {
+            for (const auto &neighbour: this->adj[u]) {
                 int v = neighbour.first;
                 int weight = neighbour.second;
 
@@ -31,7 +31,7 @@ bool BellmanFord::bellmanFord(int src) {
 
     // Check for negative-weight cycles
     for (int u = 0; u < V; ++u) {
-        for (const auto &neighbour : this->adj[u]) {
+        for (const auto &neighbour: this->adj[u]) {
             int v = neighbour.first;
             int weight = neighbour.second;
 

@@ -30,7 +30,7 @@ void Prim::primMST() {
 
         inMST[u] = true;
 
-        for (const auto& neighbor : adj[u]) {
+        for (const auto &neighbor: adj[u]) {
             int v = neighbor.first;
             int weight = neighbor.second;
 

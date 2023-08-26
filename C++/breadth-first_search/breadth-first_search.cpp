@@ -27,7 +27,7 @@ void BFSGraph::breadth_first_search(int start_node) {
         int current_node = node_queue.front();
         cout << current_node << " ";
         node_queue.pop();
-        for (auto neighbor : adjacency_list[current_node]) {
+        for (auto neighbor: adjacency_list[current_node]) {
             if (!visited[neighbor]) {
                 visited[neighbor] = true;
                 node_queue.push(neighbor);

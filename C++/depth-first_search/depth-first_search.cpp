@@ -23,10 +23,10 @@ void DFSGraph::depth_first_search(int start_node) {
     cout << endl;
 }
 
-void DFSGraph::dfs_helper(int current_node, vector<bool>& visited) {
+void DFSGraph::dfs_helper(int current_node, vector<bool> &visited) {
     visited[current_node] = true;
     cout << current_node << " ";
-    for (auto neighbor : adjacency_list[current_node]) {
+    for (auto neighbor: adjacency_list[current_node]) {
         if (!visited[neighbor]) {
             dfs_helper(neighbor, visited);
         }

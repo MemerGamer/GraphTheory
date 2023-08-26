@@ -3,7 +3,8 @@
 //
 
 #include "dijkstra.h"
-Dijkstra::Dijkstra(int V) : V(V){
+
+Dijkstra::Dijkstra(int V) : V(V) {
     this->adj.resize(V);
 }
 
@@ -30,7 +31,7 @@ void Dijkstra::dijkstra(int src) {
 
         visited[u] = true;
 
-        for (const auto& neighbor : adj[u]) {
+        for (const auto &neighbor: adj[u]) {
             int v = neighbor.first;
             int weight = neighbor.second;
 

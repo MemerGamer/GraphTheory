@@ -7,7 +7,7 @@
 
 Kruskal::Kruskal(int number_of_nodes) {
     parent.resize(number_of_nodes + 1);
-    rank.resize(number_of_nodes + 1,0);
+    rank.resize(number_of_nodes + 1, 0);
     for (int i = 0; i <= number_of_nodes; ++i) {
         parent[i] = i;
     }
@@ -18,7 +18,7 @@ void Kruskal::addEdge(int source, int destination, int weight) {
 }
 
 int Kruskal::find(int node) {
-    if(parent[node] != node) {
+    if (parent[node] != node) {
         parent[node] = find(parent[node]);
     }
     return parent[node];
@@ -28,9 +28,9 @@ void Kruskal::union_set(int first_node, int second_node) {
     int first_node_parent = find(first_node);
     int second_node_parent = find(second_node);
 
-    if(rank[first_node_parent] > rank[second_node_parent]) {
+    if (rank[first_node_parent] > rank[second_node_parent]) {
         parent[second_node_parent] = first_node_parent;
-    } else if(rank[first_node_parent] < rank[second_node_parent]) {
+    } else if (rank[first_node_parent] < rank[second_node_parent]) {
         parent[first_node_parent] = second_node_parent;
     } else {
         parent[first_node_parent] = second_node_parent;
@@ -47,7 +47,7 @@ void Kruskal::kruskalMST() {
     std::sort(edges.begin(), edges.end(), compareEdges);
 
     for (auto &edge: edges) {
-        if(find(edge.source) != find(edge.destination)) {
+        if (find(edge.source) != find(edge.destination)) {
             mst.push_back(edge);
             union_set(edge.source, edge.destination);
         }

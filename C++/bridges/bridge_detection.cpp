@@ -4,7 +4,7 @@
 
 #include "bridge_detection.h"
 
-BridgeDetection::BridgeDetection(int V): V(V) {
+BridgeDetection::BridgeDetection(int V) : V(V) {
     this->adj.resize(V);
     this->visited.resize(V, false);
     this->discTime.resize(V, -1);
@@ -37,7 +37,7 @@ void BridgeDetection::addEdge(int u, int v) {
 }
 
 void BridgeDetection::findBridges() {
-    for(int i = 0; i < this->V; ++i) {
+    for (int i = 0; i < this->V; ++i) {
         if (!this->visited[i]) {
             this->dfs(i);
         }

@@ -4,7 +4,7 @@
 
 #include "articulation_points.h"
 
-ArticulationPoints::ArticulationPoints(int V): V(V) {
+ArticulationPoints::ArticulationPoints(int V) : V(V) {
     this->adj.resize(V);
     this->visited.resize(V, false);
     this->discTime.resize(V, -1);
