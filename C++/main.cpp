@@ -1,4 +1,5 @@
 #include <iostream>
+#include <chrono>
 #include "tests.h"
 
 void tests(string input_file_path, const std::vector<string> &algorithms) {
@@ -64,6 +65,18 @@ int main(int argc, char **argv) {
     for (int i = 2; i < argc; ++i) {
         algorithms.emplace_back(argv[i]);
     }
+
+    // Measure the runtime of tests
+    auto start_time = std::chrono::high_resolution_clock::now(); // Record the start time
+
     tests(input_file_path, algorithms);
+
+    auto end_time = std::chrono::high_resolution_clock::now(); // Record the end time
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end_time - start_time);
+
+    double seconds = duration.count() / 1000000.0; // Convert microseconds to seconds
+
+    std::cout << "Tests completed in " << std::fixed << std::setprecision(6) << seconds << " seconds." << std::endl;
+
     return 0;
 }
