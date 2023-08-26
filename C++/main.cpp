@@ -27,6 +27,9 @@ void tests(string input_file_path, const std::vector<string> &algorithms) {
         else if (algorithm == "articulation_points") {
             test_articulation_points(input_file_path);
         }
+        else if (algorithm == "bridges") {
+            test_bridges(input_file_path);
+        }
         else if (algorithm == "all") {
             test_breadth_first_search(input_file_path);
             test_depth_first_search(input_file_path);
@@ -39,10 +42,11 @@ void tests(string input_file_path, const std::vector<string> &algorithms) {
             test_ford_fulkerson(input_file_path);
             test_floyd_warshall(input_file_path);
             test_articulation_points(input_file_path);
+            test_bridges(input_file_path);
         } else {
             cout << "Algorithm " << algorithm << " not found!\n";
             cout
-                    << "Available algorithms: bfs, dfs,check_bipartite, prufer, kruskal, prim, dijkstra, bellman_ford, ford_fulkerson, floyd_warshall, articulation_points, all\n";
+                    << "Available algorithms: bfs, dfs,check_bipartite, prufer, kruskal, prim, dijkstra, bellman_ford, ford_fulkerson, floyd_warshall, articulation_points, bridges all\n";
         }
     }
 }
