@@ -3,15 +3,32 @@ import heapq
 
 class Dijkstra:
     def __init__(self, V):
+        """
+        Constructor for the Dijkstra class.
+
+        :param V: The number of vertices in the graph.
+        """
         self.V = V
         self.adj = [[] for _ in range(V)]
 
     def addEdge(self, u, v, weight):
+        """
+        Add an edge to the graph.
+
+        :param u: The source vertex of the edge.
+        :param v: The target vertex of the edge.
+        :param weight: The weight/cost associated with the edge.
+        """
         self.adj[u].append((v, weight))
         # Comment the line below if it's a directed graph
         self.adj[v].append((u, weight))
 
     def dijkstra(self, src):
+        """
+        Find the shortest paths from a source vertex to all other vertices using Dijkstra's algorithm.
+
+        :param src: The source vertex from which to find shortest paths.
+        """
         dist = [float("inf")] * self.V
         visited = [False] * self.V
 

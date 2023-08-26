@@ -1,18 +1,40 @@
 class Prufer:
     def __init__(self, number_of_nodes):
+        """
+        Constructor for the Prufer class.
+
+        :param number_of_nodes: The number of nodes in the tree.
+        """
         self.number_of_nodes = number_of_nodes
         self.adjacency_list = [[] for _ in range(number_of_nodes + 1)]
         self.prufer_sequence = []
         self.decoded_edges = []
 
     def add_edge_directed(self, first_node, second_node):
+        """
+        Add a directed edge to the tree.
+
+        :param first_node: The source node of the edge.
+        :param second_node: The destination node of the edge.
+        """
         self.adjacency_list[first_node].append(second_node)
 
     def add_edge_nondirected(self, first_node, second_node):
+        """
+        Add a nondirected edge to the tree.
+
+        :param first_node: The first node of the edge.
+        :param second_node: The second node of the edge.
+        """
         self.adjacency_list[first_node].append(second_node)
         self.adjacency_list[second_node].append(first_node)
 
     def encode_tree(self):
+        """
+        Encode the tree into a Prufer sequence.
+
+        :return: The Prufer sequence as a list.
+        """
         leafs = set()
         degree = [0] * (self.number_of_nodes + 1)
         is_leaf_cut = [False] * (self.number_of_nodes + 1)
@@ -47,6 +69,11 @@ class Prufer:
         return prufer_sequence
 
     def decode_prufer_sequence(self):
+        """
+        Decode a Prufer sequence into the corresponding tree edges.
+
+        :return: The decoded tree edges as a list of tuples.
+        """
         degree = [1] * (self.number_of_nodes + 2)
 
         for node in self.prufer_sequence:

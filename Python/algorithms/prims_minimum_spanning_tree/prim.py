@@ -3,14 +3,29 @@ import heapq
 
 class Prim:
     def __init__(self, V):
+        """
+        Constructor for the Prim class.
+
+        :param V: The number of vertices in the graph.
+        """
         self.V = V
         self.adj = [[] for _ in range(V)]
 
     def addEdge(self, u, v, weight):
+        """
+        Add an edge to the graph.
+
+        :param u: The source vertex of the edge.
+        :param v: The target vertex of the edge.
+        :param weight: The weight/cost associated with the edge.
+        """
         self.adj[u].append((v, weight))
         self.adj[v].append((u, weight))
 
     def primMST(self):
+        """
+        Find the Minimum Spanning Tree (MST) of the graph using Prim's algorithm.
+        """
         key = [float("inf")] * self.V
         parent = [-1] * self.V
         inMST = [False] * self.V
