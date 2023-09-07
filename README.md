@@ -17,6 +17,18 @@ This repository contains C++ and Python implementations of various graph theory 
 - [x] Ford Fulkerson Algorithm
 - [x] Floyd-Warshall Algorithm
 
+## Programming Languages
+
+- [x] C++
+- [x] Python
+- [ ] Java
+- [ ] Kotlin
+- [ ] TypeScript
+- [ ] Rust
+- [ ] Go
+- [ ] C#
+- [ ] Zig
+
 ## Getting Started
 
 To use these algorithms, you'll need to have a basic understanding of graph theory and programming in either C++ or Python.
