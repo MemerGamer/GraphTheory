@@ -1,33 +1,25 @@
 # Graph Theory Algorithms
 
-This repository contains C++ and Python implementations of various graph theory algorithms. These algorithms are commonly taught in university courses and can be used to solve a variety of problems related to graphs.
+This repository contains implementations of various graph theory algorithms. These algorithms are commonly taught in university courses and can be used to solve a variety of problems related to graphs.
 
-## List of Algorithms
+## Algorithms and Programming Languages
 
-- [x] Breadth-First Search (BFS)
-- [x] Depth-First Search (DFS)
-- [x] Prufer Encode & Decode
-- [x] Check if a Graph is Bipartite (Colorable)
-- [x] Articulation Points (or Cut Vertices) in a Graph
-- [x] Bridge detection algorithm
-- [x] Kruskal's Minimum Spanning Tree Algorithm
-- [x] Prim's Minimum Spanning Tree Algorithm
-- [x] Dijkstra's Shortest Path Algorithm
-- [x] Bellman-Ford Algorithm
-- [x] Ford Fulkerson Algorithm
-- [x] Floyd-Warshall Algorithm
+If a box is checked, the algorithm has been implemented in that language.
 
-## Programming Languages
-
-- [x] C++
-- [x] Python
-- [ ] Java
-- [ ] Kotlin
-- [ ] TypeScript
-- [ ] Rust
-- [ ] Go
-- [ ] C#
-- [ ] Zig
+| Algorithm                                        | C++                | Python             | TypeScript | Rust | Go  | Zig | V   | Java | Kotlin | C#  | Ruby |
+| ------------------------------------------------ | ------------------ | ------------------ | ---------- | ---- | --- | --- | --- | ---- | ------ | --- | ---- |
+| Breadth-First Search (BFS)                       | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Depth-First Search (DFS)                         | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Prufer Encode & Decode                           | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Check if a Graph is Bipartite (Colorable)        | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Articulation Points (or Cut Vertices) in a Graph | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Bridge detection algorithm                       | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Kruskal's Minimum Spanning Tree Algorithm        | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Prim's Minimum Spanning Tree Algorithm           | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Dijkstra's Shortest Path Algorithm               | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Bellman-Ford Algorithm                           | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Ford Fulkerson Algorithm                         | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Floyd-Warshall Algorithm                         | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
 
 ## Getting Started
 
