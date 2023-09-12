@@ -31,3 +31,4 @@
 *.out
 *.app
 *.pyc
+TypeScript/node_modules/
