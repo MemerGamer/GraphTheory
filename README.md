@@ -6,20 +6,20 @@ This repository contains implementations of various graph theory algorithms. The
 
 If a box is checked, the algorithm has been implemented in that language.
 
-| Algorithm                                        | C++                | Python             | TypeScript | Rust | Go  | Zig | V   | Java | Kotlin | C#  | Ruby |
-| ------------------------------------------------ | ------------------ | ------------------ | ---------- | ---- | --- | --- | --- | ---- | ------ | --- | ---- |
-| Breadth-First Search (BFS)                       | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Depth-First Search (DFS)                         | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Prufer Encode & Decode                           | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Check if a Graph is Bipartite (Colorable)        | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Articulation Points (or Cut Vertices) in a Graph | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Bridge detection algorithm                       | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Kruskal's Minimum Spanning Tree Algorithm        | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Prim's Minimum Spanning Tree Algorithm           | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Dijkstra's Shortest Path Algorithm               | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Bellman-Ford Algorithm                           | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Ford Fulkerson Algorithm                         | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
-| Floyd-Warshall Algorithm                         | :heavy_check_mark: | :heavy_check_mark: |            |      |     |     |     |      |        |     |      |
+| Algorithm                                        | C++                | Python             | TypeScript         | Rust | Go  | Zig | V   | Java | Kotlin | C#  | Ruby |
+| ------------------------------------------------ | ------------------ | ------------------ | ------------------ | ---- | --- | --- | --- | ---- | ------ | --- | ---- |
+| Breadth-First Search (BFS)                       | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |      |     |     |     |      |        |     |      |
+| Depth-First Search (DFS)                         | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Prufer Encode & Decode                           | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Check if a Graph is Bipartite (Colorable)        | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Articulation Points (or Cut Vertices) in a Graph | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Bridge detection algorithm                       | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Kruskal's Minimum Spanning Tree Algorithm        | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Prim's Minimum Spanning Tree Algorithm           | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Dijkstra's Shortest Path Algorithm               | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Bellman-Ford Algorithm                           | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Ford Fulkerson Algorithm                         | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
+| Floyd-Warshall Algorithm                         | :heavy_check_mark: | :heavy_check_mark: |                    |      |     |     |     |      |        |     |      |
 
 ## Getting Started
 
