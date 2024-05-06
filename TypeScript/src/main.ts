@@ -1,5 +1,5 @@
 import yargs from 'yargs';
-import { testBreadthFirstSearch } from './tests';
+import { testBreadthFirstSearch, testDepthFirstSearch } from './tests';
 
 const argv = yargs(process.argv.slice(2))
   .usage('Usage: $0 <command> [options]')
@@ -42,6 +42,9 @@ const argv = yargs(process.argv.slice(2))
       switch (algorithm) {
         case 'bfs':
           testBreadthFirstSearch(inputFilePath);
+          break;
+        case 'dfs':
+          testDepthFirstSearch(inputFilePath);
           break;
         // Add cases for other algorithms here
         default:

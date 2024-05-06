@@ -1,5 +1,6 @@
-import { BFSGraph } from './breadth-first-search/breadth-first-search';
 import * as fs from 'node:fs';
+import { BFSGraph } from './breadth-first-search/breadth-first-search';
+import { DFSGraph } from './depth-first-search/depth-first-search';
 
 /**
  * Function to test the Breadth-First Search (BFS) algorithm.
@@ -45,6 +46,56 @@ export function testBreadthFirstSearch(inputFilePath: string): void {
     // Perform BFS starting from the chosen node
     console.log(`Breadth-First Search from node ${startNode}:`);
     bfsGraph.breadthFirstSearch(startNode);
+  });
+
+  const endTime = Date.now();
+  const elapsedTimeInMs = endTime - startTime; // / 1_000_000.0;
+  console.info(`Elapsed time: ${elapsedTimeInMs.toFixed(6)} seconds`);
+}
+
+/**
+ * Function to test the Depth-First Search (DFS) algorithm.
+ * @param inputFilePath The path to the input file containing the graph data.
+ */
+export function testDepthFirstSearch(inputFilePath: string): void {
+  // Benchmark the execution time of the DFS algorithm
+  const startTime = Date.now();
+
+  // Read the number of nodes and edges from the input file
+  let numberOfNodes: number = 0;
+  let numberOfEdges: number = 0;
+
+  fs.readFile(inputFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    const lines = data.split('\n');
+    [numberOfNodes, numberOfEdges] = lines[0].split(' ').map(Number);
+    // console.info(`Number of nodes: ${numberOfNodes}`);
+    // console.info(`Number of edges: ${numberOfEdges}`);
+
+    // console.info(`Graph data:`);
+    // for (let i = 1; i < lines.length; i++) {
+    //   console.info(lines[i]);
+    // }
+
+    // Create an instance of the DFSGraph class
+    const dfsGraph = new DFSGraph(numberOfNodes + 1);
+
+    // Parse and add edges to the graph
+    for (let i = 1; i <= numberOfEdges; i++) {
+      const [firstNode, secondNode] = lines[i].split(' ').map(Number);
+      dfsGraph.addEdgeNonDirected(firstNode, secondNode);
+    }
+
+    // Choose a starting node for DFS (e.g., node 1)
+    const startNode = 1;
+
+    // Perform DFS starting from the chosen node
+    console.log(`DFS traversal starting from node ${startNode}:`);
+    dfsGraph.depthFirstSearch(startNode);
   });
 
   const endTime = Date.now();

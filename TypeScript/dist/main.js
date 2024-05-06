@@ -42,6 +42,9 @@ const argv = (0, yargs_1.default)(process.argv.slice(2))
         case 'bfs':
             (0, tests_1.testBreadthFirstSearch)(inputFilePath);
             break;
+        case 'dfs':
+            (0, tests_1.testDepthFirstSearch)(inputFilePath);
+            break;
         // Add cases for other algorithms here
         default:
             console.error(`Algorithm "${algorithm}" not found.`);
