@@ -45,9 +45,9 @@ export function testBreadthFirstSearch(inputFilePath: string): void {
     // Perform BFS starting from the chosen node
     console.log(`Breadth-First Search from node ${startNode}:`);
     bfsGraph.breadthFirstSearch(startNode);
-  });
 
-  const endTime = Date.now();
-  const elapsedTimeInMs = endTime - startTime; // / 1_000_000.0;
-  console.info(`Elapsed time: ${elapsedTimeInMs.toFixed(6)} seconds`);
+    const endTime = Date.now();
+    const elapsedTimeInMs = endTime - startTime; // / 1_000_000.0;
+    console.info(`Elapsed time: ${(elapsedTimeInMs / 1000).toFixed(6)} seconds`);
+  });
 }

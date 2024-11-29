@@ -45,9 +45,11 @@ export class BFSGraph {
     nodeQueue.enqueue(startNode);
     visited[startNode] = true;
 
+    const traversedNodes: number[] = [];
+
     while (nodeQueue.length > 0) {
       const currentNode: number = nodeQueue.dequeue() as number;
-      process.stdout.write(`${currentNode} `);
+      traversedNodes.push(currentNode);
       for (const neighbor of this.adjacencyList[currentNode]) {
         if (!visited[neighbor]) {
           visited[neighbor] = true;
@@ -55,5 +57,7 @@ export class BFSGraph {
         }
       }
     }
+
+    console.log(traversedNodes.join(' '));
   }
 }
