@@ -32,3 +32,4 @@
 *.app
 *.pyc
 TypeScript/node_modules/
+TypeScript/dist
